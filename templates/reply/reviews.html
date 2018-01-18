@@ -1,0 +1,176 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Epic Summoners-评论详情
+{% endblock %}
+
+
+{% block content %}
+
+
+  <!-- Content Wrapper. Contains page content -->
+
+    <section class="content-header">
+      <h1>
+        Single reply
+        <small>{{ one_reply.reviewId }}</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">reply</a></li>
+        <li><a href="#">idl</a></li>
+        <li class="active">single</li>
+      </ol>
+    </section>
+
+    <div class="pad margin no-print">
+      <div class="callout callout-info" style="margin-bottom: 0!important;">
+        <h4><i class="fa fa-info"></i> Note:</h4>
+        Your reply will be stored in the local database every 5 minutes send to Google
+      </div>
+    </div>
+
+    <!-- Main content -->
+    <section class="invoice">
+      <!-- title row -->
+      <div class="row">
+        <div class="col-xs-12">
+          <h2 class="page-header">
+            <i class="fa fa-globe"></i> {{ one_reply.authorName }}
+            <small class="pull-right">Date: {{ one_reply.time }}</small>
+          </h2>
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- info row -->
+      <div class="row invoice-info">
+        <div class="col-xs-12 table-responsive">
+           <li><i class="fa fa-user bg-aqua"></i>
+          <address>
+            <h4 class="timeline-header"><a href="#">玩家评论:</a> </h4>
+            <h3>{{ one_reply.text }}</h3>
+          </address>
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+
+      <!-- Table row -->
+      <div class="row">
+        <div class="col-xs-12 table-responsive">
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th>starRating</th>
+              <th>reviewerLanguage</th>
+              <th>device</th>
+              <th>androidOsVersion</th>
+              <th>appVersionCode</th>
+              <th>appVersionName</th>
+              <th>thumbsUpCount</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>{{ one_reply.starRating }}</td>
+              <td>{{ one_reply.reviewerLanguage }}</td>
+              <td>{{ one_reply.device }}</td>
+              <td>{{ one_reply.androidOsVersion }}</td>
+              <td>{{ one_reply.appVersionCode }}</td>
+              <td>{{ one_reply.appVersionName }}</td>
+              <td>{{ one_reply.thumbsUpCount }}</td>
+            </tr>
+            <thead>
+            <tr>
+              <th>deviceClass</th>
+              <th>nativePlatform</th>
+              <th>screenDensityDpi</th>
+              <th>glEsVersion</th>
+              <th>cpuModel</th>
+              <th>cpuMake</th>
+              <th>ramMb</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>{{ one_reply.deviceClass }}</td>
+              <td>{{ one_reply.nativePlatform }}</td>
+              <td>{{ one_reply.screenDensityDpi }}</td>
+              <td>{{ one_reply.glEsVersion }}</td>
+              <td>{{ one_reply.cpuModel }}</td>
+              <td>{{ one_reply.cpuMake }}</td>
+              <td>{{ one_reply.ramMb }}</td>
+            </tr>
+            <thead>
+            <tr>
+              <th>thumbsDownCount</th>
+              <th>productName</th>
+              <th>manufacturer</th>
+              <th>screenHeightPx</th>
+              <th>screenWidthPx<th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>{{ one_reply.thumbsDownCount }}</td>
+              <td>{{ one_reply.productName }}</td>
+              <td>{{ one_reply.manufacturer }}</td>
+              <td>{{ one_reply.screenHeightPx }}</td>
+              <td>{{ one_reply.screenWidthPx }}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+
+      <div class="row">
+        <!-- accepted payments column -->
+
+
+      </div>
+            <li>
+              <i class="fa fa-comments bg-yellow"></i>
+
+              <div class="timeline-item">
+                <span class="time"><i class="fa fa-clock-o"></i> 27 mins ago</span>
+
+                <h4 class="timeline-header"><a href="#">开发者回复:</a> </h4>
+
+                <div class="timeline-body">
+                  <h3>Thanks!</h3>
+                </div>
+
+              </div>
+            </li>
+      <!-- /.row -->
+      <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">回复评论
+                <small> only reply by text at present</small>
+              </h3>
+
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body pad">
+              <form>
+                <textarea class="textarea" placeholder="Place some text here"
+                          style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+              </form>
+            </div>
+          </div>
+      <!-- this row will not appear when printing -->
+      <div class="row no-print">
+        <div class="col-xs-12">
+          <button type="button" class="btn btn-success pull-right"><i class="fa fa-credit-card"></i> Submit
+          </button>
+
+        </div>
+      </div>
+    </section>
+    <!-- /.content -->
+    <div class="clearfix"></div>
+
+
+{% endblock %}
